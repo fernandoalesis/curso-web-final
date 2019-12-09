@@ -1,3 +1,22 @@
+/* GENERAL */
+h1{
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    letter-spacing: 30px;
+}
+
+.padding-section{
+    padding: 120px 0;
+}
+
+.grey-section{
+    background-color: rgb(245,245,245);
+}
+/* FIN GENERAL */
+
+/* HEADER */
 header{
     min-height: 100vh;
 }
@@ -7,18 +26,11 @@ header{
     text-align: center;
 }
 
-h1{
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-family: 'Lato', sans-serif;
-    font-weight: 100;
-    letter-spacing: 30px;
-}
-
 .hero h1{
     color: #777;
 }
 
+/* animación SVG */
 .hero svg{
     height: 38vh;
     margin-top: 10vh;
@@ -39,3 +51,92 @@ h1{
     stroke-width: 1; 
     transition: fill 2s;
 }
+/* fin animación SVG */
+/* FIN HEADER */
+
+/* CORRECCIÓN MENU RESPONSIVE */
+@media screen and (max-width: 767px){
+    .navbar-brand{
+        align-self: start;
+    }
+    nav > div{
+        text-align: right;
+    }
+    #navbarNav{
+        margin-top: 30px;
+        padding-right: 15px;
+    }
+}
+/* FIN CORRECCIÓN MENU RESPONSIVE */
+
+/* SECCIÓN INTRO */
+#intro-nosotros{
+    box-shadow: inset 0px 10px 20px rgba(0,0,0,0.05);
+}
+
+#intro-nosotros h2{
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+
+#intro-nosotros p{
+    text-align: justify;
+    padding-right: 50px;
+    color: #777;
+}
+
+#carruselClientes2{
+    margin-top: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#carruselClientes2 img{
+    transform: scale(0.8);
+    filter: grayscale(90%);
+    transition: all .5s ease-in;
+}
+#carruselClientes2 img:hover{
+    transform: scale(1);
+    filter: grayscale(0%);
+}
+
+#videoPresentacion{
+    width: 100%;
+}
+
+#intro-nosotros .video-controls{
+    text-align: right;
+}
+
+#intro-nosotros .video-controls button{
+    border: none;
+    background: none;
+}
+
+#intro-nosotros .video-controls button:active,
+#intro-nosotros .video-controls button:focus{
+    outline: none;
+}
+
+#intro-nosotros .video-controls button i{
+    color: #777;
+    font-size: 1.5rem;
+}
+
+#intro-nosotros .video-container-inner{
+    position: relative;
+}
+
+#iconoPlayVid{
+    position: absolute;
+    color: #444;
+    font-size: 5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    cursor: pointer;
+}
+/* FIN SECCIÓN INTRO */
