@@ -1,68 +1,80 @@
 /* GENERAL */
-h1{
+h1 {
     text-transform: uppercase;
     font-size: 3rem;
     font-family: 'Lato', sans-serif;
     font-weight: 100;
     letter-spacing: 30px;
 }
+h2 {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.6rem;
+}
 
-.padding-section{
+.padding-section {
     padding: 120px 0;
 }
 
-.grey-section{
-    background-color: rgb(245,245,245);
+.grey-section {
+    background-color: rgb(245, 245, 245);
+}
+.divider {
+    width: 20px;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #bd9f86;
 }
 /* FIN GENERAL */
 
 /* HEADER */
-header{
+header {
     min-height: 100vh;
 }
 
-.hero{
+.hero {
     margin-top: 15vh;
     text-align: center;
 }
 
-.hero h1{
+.hero h1 {
     color: #777;
 }
 
 /* animación SVG */
-.hero svg{
+.hero svg {
     height: 38vh;
     margin-top: 10vh;
     transition: all .8s;
 }
 
-.hero svg.terminado{
+.hero svg.terminado {
     transform: rotate(-360deg) scale(1.1) translateY(10px);
 }
 
-.hero svg.terminado .g{
+.hero svg.terminado .g {
     fill: yellow;
 }
 
-.hero svg *{
-    fill:none;
-    stroke: #000000; 
-    stroke-width: 1; 
+.hero svg * {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 1;
     transition: fill 2s;
 }
 /* fin animación SVG */
 /* FIN HEADER */
 
 /* CORRECCIÓN MENU RESPONSIVE */
-@media screen and (max-width: 767px){
-    .navbar-brand{
+@media screen and (max-width: 767px) {
+    .navbar-brand {
         align-self: start;
     }
-    nav > div{
+    nav > div {
         text-align: right;
     }
-    #navbarNav{
+    #navbarNav {
         margin-top: 30px;
         padding-right: 15px;
     }
@@ -70,66 +82,66 @@ header{
 /* FIN CORRECCIÓN MENU RESPONSIVE */
 
 /* SECCIÓN INTRO */
-#intro-nosotros{
-    box-shadow: inset 0px 10px 20px rgba(0,0,0,0.05);
+#intro-nosotros {
+    box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-#intro-nosotros h2{
+#intro-nosotros h2 {
     font-family: 'Lato', sans-serif;
     letter-spacing: 3px;
     margin-bottom: 40px;
 }
 
-#intro-nosotros p{
+#intro-nosotros p {
     text-align: justify;
     padding-right: 50px;
     color: #777;
 }
 
-#carruselClientes2{
+#carruselClientes2 {
     margin-top: 40px;
     margin-right: 10px;
     margin-left: 10px;
 }
 
-#carruselClientes2 img{
+#carruselClientes2 img {
     transform: scale(0.8);
     filter: grayscale(90%);
     transition: all .5s ease-in;
 }
-#carruselClientes2 img:hover{
+#carruselClientes2 img:hover {
     transform: scale(1);
     filter: grayscale(0%);
 }
 
-#videoPresentacion{
+#videoPresentacion {
     width: 100%;
 }
 
-#intro-nosotros .video-controls{
+#intro-nosotros .video-controls {
     text-align: right;
 }
 
-#intro-nosotros .video-controls button{
+#intro-nosotros .video-controls button {
     border: none;
     background: none;
 }
 
 #intro-nosotros .video-controls button:active,
-#intro-nosotros .video-controls button:focus{
+#intro-nosotros .video-controls button:focus {
     outline: none;
 }
 
-#intro-nosotros .video-controls button i{
+#intro-nosotros .video-controls button i {
     color: #777;
     font-size: 1.5rem;
 }
 
-#intro-nosotros .video-container-inner{
+#intro-nosotros .video-container-inner {
     position: relative;
 }
 
-#iconoPlayVid{
+#iconoPlayVid {
     position: absolute;
     color: #444;
     font-size: 5rem;
@@ -140,3 +152,87 @@ header{
     cursor: pointer;
 }
 /* FIN SECCIÓN INTRO */
+
+/* SECCIÓN PROCESO */
+
+.subtitle {
+    margin-bottom: 80px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    color: #333;
+}
+.subtitle i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+#process .reveal {
+    transform: translateX(40px);
+    opacity: 0;
+    transition-duration: 1.2s;
+}
+#process .reveal.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.marginsY {
+    margin: 100px 0;
+}
+.facts .numero {
+    font-family: 'Lato', sans-serif;
+    font-size: 7rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #edefeb;
+}
+.facts .article h3 {
+    font-size: 1.2rem;
+}
+.facts article {
+    padding-left: 60px;
+    color: #999;
+    transform: translateY(-70px);
+}
+/* FIN SECCIÓN PROCESO */
+
+/* inicio SECCIÓN SKILLS */
+
+#skills {
+    padding: 50px 0;
+    /*background-image: url(../img/backgrounds/bg-skills.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;*/
+}
+#skills .elemento {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+#skills .elemento article {
+    padding: 20px;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.2);
+}
+#skills i {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: white;
+}
+#skills .elemento h5 {
+    text-transform: lowercase;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-style: italic;
+}
+#skills .numero {
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 10px;
+    font-size: 42px;
+    color: white;
+    font-weight: 500;
+}
+
+/* FIN SECCIÓN SKILLS */
