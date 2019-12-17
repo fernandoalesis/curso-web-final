@@ -6,11 +6,14 @@ $(window).on('scroll', () => {
     $('#logo').css('transform', `rotate(${giraRuedita})`);
 
     //aparicion de imagenes
-    const altura = $('.reveal').offset().top; //offset me dice en que posicion absoluta esta dentro de la pagina
-    const diferencia = window.innerHeight * 0.5;
-    if (scrollRealizado >= altura - diferencia) {
-        $('.reveal').addClass('visible');
-    }
+
+    $('.reveal').each(function() {
+        const altura = $(this).offset().top; //offset me dice en que posicion absoluta esta dentro de la pagina
+        const diferencia = window.innerHeight * 0.7;
+        if (scrollRealizado >= altura - diferencia) {
+            $(this).addClass('visible');
+        }
+    });
 });
 
 // Trazado de SVG
@@ -51,11 +54,19 @@ function carrusel2() {
     });
 }
 
+// quitar spinner
+function quitarSpinner() {
+    $('.spinner').fadeOut(1000, () => {
+        $('h1').animate({ 'letter-spacing': '20px' }, 800);
+    });
+}
+
 // Cuando la página esté lista
 window.onload = () => {
     trazar();
     tipear();
     carrusel2();
+    quitarSpinner();
 };
 
 // Controles video - sección intro
@@ -78,7 +89,7 @@ $('#stopVid').on('click', () => {
 });
 
 // Smooth Scroll menu navegación
-$('.nav-link').on('click', function() {
+$('.nav-link, button-link').on('click', function() {
     const destino = $(this).attr('href');
     $('html').animate({ scrollTop: $(destino).offset().top }, 1000);
 });
